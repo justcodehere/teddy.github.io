@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio - Teddy Dinku</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #20232a;
+            line-height: 1.6;
+        }
+        header {
+            background: #282c34;
+            color: #fff;
+            padding: 40px 0 20px 0;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        header p { font-size: 1.2rem; margin-bottom: 16px; }
+        nav { display: flex; gap: 20px; }
+        nav a {
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover { text-decoration: underline; }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section { margin-bottom: 40px; }
+        h2 {
+            color: #282c34;
+            margin-bottom: 18px;
+            font-size: 2rem;
+        }
+        #skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+        }
+        #skills-list li {
+            background: #61dafb;
+            color: #282c34;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        #projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #e0e4ea;
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(40,44,52,0.04);
+            transition: box-shadow 0.2s;
+        }
+        .project-card:hover {
+            box-shadow: 0 4px 16px rgba(40,44,52,0.10);
+        }
+        .project-title { font-size: 1.25rem; margin-bottom: 8px; }
+        .project-desc { margin-bottom: 10px; color: #50555c; }
+        .project-links a {
+            color: #61dafb;
+            margin-right: 12px;
+            text-decoration: none;
+        }
+        .project-links a:hover { text-decoration: underline; }
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+        #contact-form input,
+        #contact-form textarea {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        #contact-form button {
+            background: #61dafb;
+            color: #282c34;
+            border: none;
+            padding: 10px 0;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #contact-form button:hover { background: #21a1f3; }
+        #contact-info p, #contact-info a {
+            font-size: 1.05rem;
+            color: #282c34;
+        }
+        footer {
+            background: #282c34;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 0 8px; }
+            #projects-list { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="name">Teddy Dinku</h1>
+            <p id="profession">IT Professional & Developer</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Teddy Dinku. I am an IT professional with experience in developing software solutions for healthcare and education. 
+                I have worked on management systems for clinics and schools, focusing on efficiency and user-friendly design. 
+                I am dedicated to building robust solutions that make a real difference for organizations and their clients.
+            </p>
+        </section>
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <ul id="skills-list">
+                <!-- Skills will be populated by JavaScript -->
+            </ul>
+        </section>
+        <section id="projects" class="container">
+            <h2>Previous Works</h2>
+            <div id="projects-list">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="contact-info">
+                <p>Phone: <a href="tel:0918788229">0918788229</a></p>
+                <p>Email: <a href="mailto:teddydinku0@gmail.com">teddydinku0@gmail.com</a></p>
+                <!-- Add LinkedIn and GitHub if available -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Teddy Dinku. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Skills - add or edit as needed
+        const skills = [
+            "Software Development",
+            "System Analysis",
+            "Web Design",
+            "Database Management",
+            "School & Clinic Management Systems",
+            "Problem Solving",
+            "Client Support"
+        ];
+        // Previous Works / Projects
+        const projects = [
+            {
+                title: "Dr. Mehrete Pediatric Clinic System",
+                desc: "Developed a management system for pediatric clinic operations including patient records, appointments, and billing.",
+                links: []
+            },
+            {
+                title: "Dr. Zemene Pediatric Clinic System",
+                desc: "Created a digital solution to streamline daily clinic activities and improve service delivery.",
+                links: []
+            },
+            {
+                title: "Facile Dental Clinic System",
+                desc: "Implemented a dental clinic management platform with modules for scheduling, patient history, and inventory.",
+                links: []
+            },
+            {
+                title: "Dr. Shiferaw Dental Clinic System",
+                desc: "Built a comprehensive dental management system enhancing workflow and record keeping.",
+                links: []
+            },
+            {
+                title: "School Management System",
+                desc: "Designed and deployed a system for school administration, including student records, grading, and communication.",
+                links: []
+            }
+        ];
+        // Populate Skills
+        const skillsList = document.getElementById("skills-list");
+        skills.forEach(skill => {
+            const li = document.createElement("li");
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+        // Populate Projects
+        const projectsList = document.getElementById("projects-list");
+        projects.forEach(project => {
+            const card = document.createElement("div");
+            card.className = "project-card";
+            card.innerHTML = `
+                <div class="project-title">${project.title}</div>
+                <div class="project-desc">${project.desc}</div>
+                <div class="project-links">
+                    ${project.links.length ? project.links.map(link => `<a href="${link.url}" target="_blank">${link.label}</a>`).join('') : ""}
+                </div>
+            `;
+            projectsList.appendChild(card);
+        });
+        // Contact form (demo only, does not send actual email)
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you for contacting me! I'll respond as soon as possible.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
